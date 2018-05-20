@@ -9,7 +9,7 @@ vector<string> split_string(string);
  */
 vector<int> dynamicArray(int n, vector<vector<int>> queries) {
 
-    vector<vector<int>> seqList(n, vector<int>(0));
+    vector<vector<int>> seqList(n, vector<int>());
     int index, index2, lastAnswer = 0;
     vector<int> output;
     
@@ -20,7 +20,7 @@ vector<int> dynamicArray(int n, vector<vector<int>> queries) {
         }
         else if (input_line[0] == 2) {
             index = ((input_line[1]^lastAnswer)%n);
-            index2 = (input_line[2]%n);
+            index2 = (input_line[2]%(seqList[index].size()));
             lastAnswer = seqList[index][index2];
 
             output.push_back(lastAnswer);
