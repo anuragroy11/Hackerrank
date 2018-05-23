@@ -59,19 +59,11 @@ void free_singly_linked_list(SinglyLinkedListNode* node) {
 
 void reversePrint(SinglyLinkedListNode* head) {
     
-    vector<int> nodeData;
-
-    while (head -> next != nullptr) {
-        nodeData.push_back(head -> data);
-        head = head -> next;
-    }
+    if (head == NULL)
+        return;
     
-    nodeData.push_back(head -> data);
-    
-    for (auto i = nodeData.rbegin(); i != nodeData.rend(); ++i)
-        cout << *i << endl;
-
-
+    reversePrint(head->next);
+    cout << head -> data << endl;
 }
 
 int main()
