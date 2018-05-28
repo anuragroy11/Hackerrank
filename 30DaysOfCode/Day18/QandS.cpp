@@ -1,7 +1,11 @@
 #include <iostream>
 #include <vector>
+#include <stack>
+#include <queue>
 
 using namespace std;
+
+//Implementing using vectors
 
 class Solution {
     
@@ -27,6 +31,37 @@ class Solution {
             queue.begin() = queue.begin();
             return (*ch);
         }
+
+};
+
+//Implementing using stacks and queues from STL
+
+class Solution {
+    
+    stack<char> s;
+    queue<char> q;
+    
+    public:
+        void pushCharacter(char ch) {
+            s.push(ch);
+        }
+    
+        void enqueueCharacter(char ch) {
+            q.push(ch);
+        }
+    
+        char popCharacter() {
+            char ch = s.top();
+            s.pop();
+            return(ch); 
+        }
+    
+        char dequeueCharacter() {
+            char ch = q.front();
+            q.pop();
+            return(ch);
+        }
+            
 
 };
 
