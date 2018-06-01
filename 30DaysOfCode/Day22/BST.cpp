@@ -35,21 +35,13 @@ class Solution{
            }
         }
 
-        int getHeight(Node* root){
-            int height = 0;
-            
-            if (root == NULL)
+        int getHeight(Node* root) {
+            if (!root)
                 return -1;
-            else if (root -> left == NULL && root -> right == NULL)
-                return height++;
-            else if (root -> left == NULL)
-                return 1 + getHeight(root -> right);
-            else if (root -> right == NULL)
-                return 1 + getHeight(root -> left);
-            else return 1 + max(getHeight(root -> left), getHeight(root -> right));
+            else return 1 + max(getHeight(root->left), getHeight(root->right));
         }
 
-}; //End of Solution
+}; 
 
 int main() {
     Solution myTree;
