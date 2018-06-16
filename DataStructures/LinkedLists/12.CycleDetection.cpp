@@ -75,6 +75,23 @@ bool has_cycle(SinglyLinkedListNode* head) {
 
 }
 
+// Slow Pointer Fast Pointer SOlution
+
+bool has_cycle(Node* head) {
+    Node* fast = head;
+    Node* slow = head;
+    while(fast != NULL && slow != NULL && fast->next) {
+        fast = fast->next->next;
+        slow = slow->next;
+        if(fast == slow) {
+            return 1;
+        }
+    }
+    
+    return 0;
+}
+
+
 int main()
 {
     ofstream fout(getenv("OUTPUT_PATH"));
