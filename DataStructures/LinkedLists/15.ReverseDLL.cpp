@@ -60,6 +60,25 @@ void free_doubly_linked_list(DoublyLinkedListNode* node) {
     }
 }
 
+DoublyLinkedListNode* reverse(DoublyLinkedListNode* head) {
+    DoublyLinkedListNode* temp;
+    
+    while (head -> next != nullptr) {
+        temp = head -> next;
+        head -> next = head -> prev;
+        head -> prev = temp;
+        
+        head = head -> prev;
+    }
+    
+    head -> next = head -> prev;
+    head -> prev = nullptr;
+    
+    return head;
+    
+
+}
+
 int main()
 {
     ofstream fout(getenv("OUTPUT_PATH"));
