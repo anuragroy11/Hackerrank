@@ -4,7 +4,7 @@ using namespace std;
 
 vector<string> split_string(string);
 
-// Complete the checkMagazine function below.
+
 void checkMagazine(vector<string> magazine, vector<string> note) {
     map<string, int> comp;
     int flag = 0;
