@@ -17,8 +17,8 @@ bool is_balanced(string expression) {
   return s.empty();
 }
 
-int main()
-{
+int main() {
+  
     int t;
     cin >> t;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
