@@ -9,8 +9,6 @@ A Node is defined as:
 */
 
 bool has_cycle(Node* head) {
-    // Complete this function
-    // Do not write the main method
     
     Node* slow = head;
     Node* fast = head;
