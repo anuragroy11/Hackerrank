@@ -2,7 +2,6 @@
 
 using namespace std;
 
-// Complete the makeAnagram function below.
 int makeAnagram(string a, string b) {
     auto count = 0;
     vector<int> freq(26, 0);
