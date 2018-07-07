@@ -4,7 +4,6 @@ using namespace std;
 
 vector<string> split_string(string);
 
-
 void checkMagazine(vector<string> magazine, vector<string> note) {
     map<string, int> comp;
     int flag = 0;
@@ -25,8 +24,8 @@ void checkMagazine(vector<string> magazine, vector<string> note) {
 
 }
 
-int main()
-{
+int main() {
+
     string mn_temp;
     getline(cin, mn_temp);
 
