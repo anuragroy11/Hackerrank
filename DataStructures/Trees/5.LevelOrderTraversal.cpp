@@ -47,17 +47,27 @@ class Node {
 };
 */
 
-    void levelOrder(Node * root) {
+    void levelOrder(Node* root) {
+        queue<Node*> q;
         
-        cout << root -> data << " ";
+        Node* temp = root;
         
-        if ((root -> left != nullptr) && (root -> right != nullptr)) {
+        if(root != nullptr)
+            q.push(root);
+        
+        while(!q.empty()) {
             
-        } else if (root -> right != nullptr)
-            levelOrder(root -> right);
-        else if (root -> left != nullptr) 
-            levelOrder(root -> left);
-        
+            cout << temp -> data << " ";
+            
+            if(temp -> left != nullptr) 
+                q.push(temp -> left); 
+            
+            if(temp -> right != nullptr)
+                q.push(temp -> right);
+            
+            q.pop();
+            temp= q.front();
+        }
     }
 
 }; //End of Solution
